@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  
+</head>
+
+<body>
+    <div class="container">
+    <div class="wrapper">
+      <ul class="steps">
+        <li class="is-active">Step 1</li>
+        <li>Step 2</li>
+      </ul>
+      <form class="form-wrapper" id="myForm" action="/result" method="POST">
+        <fieldset class="section is-active">
+          <h3 style="color:#3498db">Choose Scheduling Algorithm </h3>
+
+          <input type="radio" id="radio1" value="s1" name="radio1"/>
+          <label for="radio1">First-Come, First-Served Scheduling</label>
+
+          <input type="radio" id="radio2" value="s2" name="radio1"/>
+          <label for="radio2">Shortest-Job-First Scheduling</label>
+
+          <input type="radio" id="radio3" value="s3" name="radio1"/>
+          <label for="radio3">Priority Scheduling </label>
+
+          <input type="radio" id="radio4" value="s4" name="radio1"/>
+          <label for="radio4">Round-Robin Scheduling </label>
+          <div class="button" onclick="update()">Next</div>
+        </fieldset>
+        <fieldset class="section">
+          <div id="info">
+            
+            
+          </div>
+          <div class="add" onclick="update2()">add</div>
+          <input type="submit" value="GO" class="button">
+          
+        </fieldset>
+        <fieldset class="section">
+          <div class="loading">
+            <p>Please wait</p>
+            <span><i></i><i></i></span>
+        </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script src="{{ url_for('static', filename='js/ind.js') }}"></script>
+
+</body>
+</html>
