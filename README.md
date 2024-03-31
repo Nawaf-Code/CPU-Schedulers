@@ -1,4 +1,4 @@
-# CPU-Schedulers Documentation
+# CPU-Schedulers
 
 ## Overview
 
